@@ -8,6 +8,7 @@ import {HttpClient} from '@angular/common/http'
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  public data:any;
 
   constructor(
     private authService: AuthService,
@@ -15,7 +16,10 @@ export class MenuComponent implements OnInit {
     private httpClient: HttpClient
   ) {}
 
-  ngOnInit(): void {}
+
+  ngOnInit(): void { this.dataAPI().subscribe( d=>{console.log(d);this.data=d;
+  } );
+   }
   onClick() {
     this.authService.logout()
       .then(() => {
@@ -24,10 +28,9 @@ export class MenuComponent implements OnInit {
       .catch(error => console.log(error));
   }
   dataAPI(){
-    const apiURL:string = "https://apis.datos.gob.ar/series/api/series/?ids=168.1_T_CAMBIOR_D_0_0_26&limit=5000&format=json"
-    
-    console.log( this.httpClient.get(apiURL).subscribe( data=>{console.log(data);
-    } ) );
+    const apiURL:string = 'https://apis.datos.gob.ar/series/api/series/?ids=168.1_T_CAMBIOR_D_0_0_26&start_date=2023-01-01&end_date=2023-08-06&format=json'
+    //this.httpClient.get(apiURL).
+    return this.httpClient.get(apiURL);
     
   }
 
