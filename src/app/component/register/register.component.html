@@ -1,15 +1,13 @@
-<h2>Registro de usuario</h2>
-<form [formGroup]="formReg" (ngSubmit)="onSubmit()">
-    <div>
-        <label>Email</label>
-        <input type="text" formControlName="email">
-    </div>
-    <div>
-        <label>Password</label>
-        <input type="password" formControlName="password">
-    </div>
-    <input type="submit" value="Enviar">
-    <div>
-        <a (click)="login()">Iniciar sesión</a>
-    </div>
-</form>
+<div class="formCompleto">
+    <form class="formulario" [formGroup]="formReg" (ngSubmit)="onSubmit()" style="margin-top: 15%;">
+        <h2 class="titulo">Registro de <span class="color-usuario">usuario</span></h2>
+        <div class="email, input">
+            <input type="text" formControlName="email" placeholder="Email...">
+        </div>
+        <div class="contraseña, input">
+            <input type="password" formControlName="password" placeholder="Contraseña...">
+        </div>
+        <div style="margin-bottom: 5%;"><a (click)="login()">Inicia sesión aqui.</a></div>
+        <input class="button" type="submit" value="Enviar">
+    </form>
+</div>
