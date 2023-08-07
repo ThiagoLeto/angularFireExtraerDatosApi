@@ -27,6 +27,7 @@ input[type="text"], input[type="password"]{
 a{
     text-decoration: dashed;
     color: #80DEEA;
+    cursor: pointer;
 }
 .button{
     font-size: large;
@@ -36,4 +37,5 @@ a{
     background-color: #009900;
     border: none;
     color: azure;
+    cursor: pointer;
 }

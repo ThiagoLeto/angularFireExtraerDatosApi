@@ -1,18 +1,22 @@
-<button (click)="onClick()"> Log-out </button>
-<table class="table">
-    <thead>
-        <tr>
-          <th scope="col">indice_tiempo</th>
-          <th scope="col">tipo_cambio</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let post of data.data"> 
-            <td>{{post[0]}}</td>
-            <td>{{post[1]}}</td>
-        </tr>
-      </tbody>
-</table>
-
+<div id="meun">
+  <button (click)="onClick()" class="botonLogout"> Log-out </button>
+    <div style="background-color: #36393e; width: 20%; margin: auto;">
+    <h1>Me <span style="color: #009900;">nu</span></h1>
+    <table class="table">
+        <thead>
+            <tr>
+              <th scope="col" style="padding: 6px;">indice_tiempo</th>
+              <th scope="col" style="padding: 6px; color: #009900;">tipo_cambio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let post of data.data"  style="text-align: center;"> 
+                <td style="padding: 2px;">{{post[0]}}</td>
+                <td style="color: #009900;">{{post[1]}}</td>
+            </tr>
+          </tbody>
+    </table>
+  </div>
+</div>
 
 
