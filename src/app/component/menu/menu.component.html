@@ -1,1 +1,17 @@
-<button (click)="onClick()">Logout</button>
+<table class="table">
+    <thead>
+        <tr>
+          <th scope="col">indice_tiempo</th>
+          <th scope="col">tipo_cambio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let post of data.data"> 
+            <td>{{post[0]}}</td>
+            <td>{{post[1]}}</td>
+        </tr>
+      </tbody>
+</table>
+
+
+
